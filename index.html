@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-color:red">
+    
+    <div style="width: 500px;" class="container col-4 align-self-center border border-dark main-div">
+        <h1 style="color: black;" class="text-center mt-3">Weather</h1>
+
+        <form class="text-center mt-3 search" onsubmit="getWeather(event)">
+            <input type="search" id="location" placeholder="Enter location...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="error">Invalid location</div>
+        <div class="no-data">No weather data</div>
+        
+        <div class="weather text-center">
+            <img class="weather-icon">
+            <h1 class="temp"></h1>
+
+            <h2 class="city">City Name</h2>
+
+            <div class="details">
+                <div class="col">
+                    <div>
+                        <p class="min_temp">min temp</p>
+                        <p style="color: rgb(0, 255, 234)">Low</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <p class="max_temp">max temp</p>
+                        <p style="color: rgb(255, 0, 0)">High</p>
+                    </div>
+                </div>
+            </div>
+            <div class="details2">
+                <div class="col">
+                    <div>
+                        <p class="humidity mt-4"></p>
+                        <p style="color: rgb(0, 255, 30);">Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <p class="wind mt-3"></p>
+                        <p style="color: #2622f6;">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+    <script src="https://kit.fontawesome.com/4ee9d8a1ff.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

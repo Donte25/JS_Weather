@@ -53,7 +53,7 @@ const displayWeather = (data) => {
         const tempColor = document.querySelector('.main-div');
         
         if (data.main.temp >= 80) {
-            tempColor.style.background = 'linear-gradient(to bottom right, red, yellow)'
+            tempColor.style.background = 'linear-gradient(to bottom right, red, orange)'
         } else if (data.main.temp >= 40 && data.main.temp < 80 ) {
             tempColor.style.background = 'linear-gradient(to bottom right, blue, #ffb300)'
         } else {
